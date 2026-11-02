@@ -1,8 +1,7 @@
 /* ============================================================
    data.js — THE ONLY FILE YOU EVER EDIT
    Edit on github.com → Commit → live in ~1-10 min. That's it.
-   cost:   number (points) or "FREE" or any string ("20pt stake")
-           "?" renders as a TBC pill
+   cost:   number (points) | "FREE" | "?" (TBC) | any string ("20pt stake")
    status: "" | "new" | "updated" | "disabled"
            disabled cards grey out; the badge auto-detects the type
            from the description: (Broadcaster only) / (Mod only) /
@@ -10,8 +9,8 @@
    ============================================================ */
 
 window.MENU = {
-  streamer: "drewdj45",
-  updated: "2026-10-29",
+  streamer: "Drewdj4",
+  updated: "2026-11-02",
 
   links: [
     { label: "Twitch", url: "https://www.twitch.tv/drewdj4" },
@@ -19,7 +18,7 @@ window.MENU = {
     { label: "Discord", url: "https://discord.gg/TD9dDumUR" },
   ],
 
-  intro: "<b>AYO YO YO!</b> You earn <b>1 point every minute</b> you watch — as long as you're subbed and actually vibing in chat. Spend 'em on chaos below. In chat? Type <b>!c</b> or <b>!command</b> for the quick list.",
+  intro: "<b>AYO YO YO!</b> You earn <b>1 point every minute</b> you watch — as long as you're subbed and actually vibing in chat. Spend 'em on chaos below. In chat? Type <b>!c</b> for the quick list.",
 
   sections: [
     {
@@ -77,7 +76,7 @@ window.MENU = {
         { name: "!Gamble", cost: "Your bet", desc: "Feeling lucky? The house always wins.", cooldown: "", status: "" },
         { name: "!scratchcard / !sc", cost: 25, desc: "Tiny odds, but every buy feeds the jackpot pool!", cooldown: "", status: "" },
         { name: "!givepoints @user", cost: "FREE", desc: "Gift some of your points to a homie. Gotta pay the Troll toll doe", cooldown: "", status: "" },
-        { name: "!giftp @user", cost: "FREE", desc: "Gift points after hours. (Offline)", cooldown: "", status: "disabled" }
+        { name: "!giftp @user", cost: "FREE", desc: "Gift points after hours. (Offline).", cooldown: "", status: "disabled" }
       ]
     },
     {
@@ -125,8 +124,8 @@ window.MENU = {
         { name: "!suggest", cost: "FREE", desc: "Submit a question. Stump us.", cooldown: "", status: "" },
         { name: "!what", cost: 10, desc: "On-screen guesser. Winner takes the pot. Don't overthink it.", cooldown: "", status: "" },
         { name: "!TA", cost: "FREE", desc: "Toggle Trivia Addict mode. Sweat optional.", cooldown: "", status: "" },
-        { name: "!fctrivia", cost: "FREE", desc: "End the current game early. (Mod only.)", cooldown: "", status: "disabled" },
-        { name: "!skiptrivia", cost: "FREE", desc: "Skip the current question. (Mod only.)", cooldown: "", status: "disabled" },
+        { name: "!fctrivia", cost: "FREE", desc: "End the current game early. (Mod only).", cooldown: "", status: "disabled" },
+        { name: "!skiptrivia", cost: "FREE", desc: "Skip the current question. (Mod only).", cooldown: "", status: "disabled" },
         { name: "!tstats", cost: "FREE", desc: "Personal Trivia stats (Offline).", cooldown: "", status: "disabled" },
         { name: "!tss", cost: "FREE", desc: "Search the Trivia leaderboard (Offline).", cooldown: "", status: "disabled" },
         { name: "!ttb", cost: "FREE", desc: "Top Trivia board (Offline).", cooldown: "", status: "disabled" }
@@ -148,7 +147,7 @@ window.MENU = {
         { name: "!quizleaderboard", cost: "FREE", desc: "The quiz leaderboard. Flex responsibly.", cooldown: "", status: "" },
         { name: "!challenge @user", cost: "FREE", desc: "Challenge a homie to a bot-run showdown.", cooldown: "", status: "" },
         { name: "!mytickets", cost: "FREE", desc: "Check your lotto tickets. One of them is definitely the one.", cooldown: "", status: "" },
-        { name: "!rollp", cost: "?", desc: "Roll for points. The dice don't care.", cooldown: "", status: "disabled" }, // ⚠ panel looked like Mod+ — move to Mod Tools if so
+        { name: "!rollp", cost: "?", desc: "Roll for points. The dice don't care.", cooldown: "", status: "disabled" }, // not fully built yet — stays disabled here
         { name: "!loan amount", cost: "?", desc: "Borrow points from the bot bank. The interest is real. So is the regret.", cooldown: "", status: "disabled" },
         { name: "!challengeStats", cost: "FREE", desc: "Your challenge record. Wins, losses, trauma.", cooldown: "", status: "disabled" },
         { name: "!raffle", cost: "?", desc: "Enter the raffle. Winner pulled live on stream.", cooldown: "", status: "disabled" },
@@ -183,8 +182,7 @@ window.MENU = {
       name: "🤖 Egg Cohost (StreamLinkr)",
       note: "We got a cohost living in chat. It remembers the regulars, reads the room, and talks back — greetings, shoutouts, roasts on demand, plus the holy trinity: hugs, slaps, bonks. <b>Everything below is FREE unless marked as a game.</b>",
       items: [
-        { name: "!commment", cost: "FREE", desc: "Talk to the Egg directly. Ask it anything — it has opinions.", cooldown: "", status: "new" },
-        { name: "!spin", cost: "FREE", desc: "Challenge Wheel. Free spins, but at a cost.", cooldown: "", status: "new" },
+        { name: "!comment", cost: "FREE", desc: "Talk to the Egg directly. Ask it anything — it has opinions.", cooldown: "", status: "new" },
         { name: "!roast @user", cost: "FREE", desc: "The Egg roasts you. It knows you better than you know you.", cooldown: "", status: "new" },
         { name: "!compliment @user", cost: "FREE", desc: "The Egg says something nice. Might be backhanded. No refunds.", cooldown: "", status: "new" },
         { name: "!rank", cost: "FREE", desc: "The Egg assigns your official chat rank. Results may hurt.", cooldown: "", status: "new" },
@@ -201,7 +199,8 @@ window.MENU = {
         { name: "!8ball", cost: "FREE", desc: "Ponder the Ball.", cooldown: "", status: "new" },
         { name: "!urban", cost: "FREE", desc: "Urban Dictionary, via the Egg. Educational-ish.", cooldown: "", status: "new" },
         { name: "!stfu", cost: "FREE", desc: "Egg yapping? Shut him up bruh.", cooldown: "", status: "new" },
-        { name: "!command text", cost: "FREE", desc: "Make the Egg say anything, out loud. (Mod only — you had your chance.)", cooldown: "60s", status: "disabled" }
+        { name: "!command text", cost: "FREE", desc: "Make the Egg say anything, out loud. (Mod only) — you had your chance.", cooldown: "60s", status: "disabled" },
+        { name: "!spin", cost: "FREE", desc: "Challenge Wheel. Free spins, mod-run. (Mod only).", cooldown: "", status: "disabled" }
       ]
     },
     {
@@ -217,7 +216,7 @@ window.MENU = {
         { name: "!leaderboard", cost: "FREE", desc: "The egg economy leaderboard. Top of the food chain.", cooldown: "", status: "" },
         { name: "!counters", cost: "FREE", desc: "Everything we're counting. Yes, we keep count.", cooldown: "", status: "" },
         { name: "!points", cost: "FREE", desc: "Check your points balance. Count those eggs.", cooldown: "", status: "" },
-        { name: "!urban term", cost: "FREE", desc: "Urban Dictionary lookup. Educational. Allegedly. (VIP+ and up.)", cooldown: "", status: "disabled" },
+        { name: "!urban term", cost: "FREE", desc: "Urban Dictionary lookup. Educational. Allegedly. (VIP+ and up).", cooldown: "", status: "disabled" },
         { name: "!define word", cost: "FREE", desc: "Real dictionary definition. Edu-ma-cation.", cooldown: "", status: "disabled" },
         { name: "!convert amount", cost: "FREE", desc: "Unit & currency converter. Math, but automated.", cooldown: "", status: "disabled" }
       ]
@@ -226,7 +225,7 @@ window.MENU = {
       name: "❓ Mystery Commands",
       note: "These commands exist in the bot. What they do is between the bot and God.",
       items: [
-        { name: "!subathon", cost: "FREE", desc: "subathon...", cooldown: "", status: "disabled" }, // ⚠ sobathon or subathon?
+        { name: "!subathon", cost: "FREE", desc: "subathon...", cooldown: "", status: "disabled" }
       ]
     },
     {
@@ -235,7 +234,7 @@ window.MENU = {
         { name: "!note text", cost: "FREE", desc: "Slap a note onto the stream overlay. Multilingual: !postit, !notiz, !merken.", cooldown: "", status: "new" },
         { name: "!shownotes", cost: "FREE", desc: "Everything currently stuck on screen.", cooldown: "", status: "new" },
         { name: "!delnote", cost: "FREE", desc: "Delete a specific note. (aka !radier)", cooldown: "", status: "new" },
-        { name: "!clearnotes", cost: "FREE", desc: "Nuke ALL notes. Fresh slate. (Mods only, ya gremlins).", cooldown: "", status: "new" },
+        { name: "!clearnotes", cost: "FREE", desc: "Nuke ALL notes. Fresh slate. (Mod only) — ya gremlins.", cooldown: "", status: "new" },
         { name: "!q / !look", cost: "FREE", desc: "Search chat history and profiles. The receipts are kept.", cooldown: "", status: "" },
         { name: "!s", cost: "FREE", desc: "Suggest anything — lands straight in the Discord. You joined, right?", cooldown: "10sec", status: "" },
         { name: "!firstrank", cost: "FREE", desc: "The first chatter this channel ever had. Certified OG.", cooldown: "", status: "" },
@@ -246,27 +245,29 @@ window.MENU = {
       name: "🔧 Mod & Broadcaster Tools",
       note: "Role-locked. Greyed out because they're not for chat — mods and the man himself, this shelf is yours.",
       items: [
-        { name: "!tts text", cost: "FREE", desc: "The bot's TTS voice on demand. (Broadcaster only.) Viewers: use the !TTS redeem in Chaos.", cooldown: "", status: "disabled" },
-        { name: "!info", cost: "FREE", desc: "Bot and channel info dump. (Mod only.)", cooldown: "", status: "disabled" },
-        { name: "!stats", cost: "FREE", desc: "Bot stats. Numbers go up. (Mod only.)", cooldown: "", status: "disabled" },
-        { name: "!recap", cost: "FREE", desc: "Recap of the stream so far. For mods who tabbed out. (Mod only.)", cooldown: "", status: "disabled" },
-        { name: "!resetwheel", cost: "FREE", desc: "Reset the Challenge Wheel. (Mod only.)", cooldown: "", status: "disabled" },
-        { name: "!resetcounter counter", cost: "FREE", desc: "Reset a counter to zero. (Mods only.)", cooldown: "", status: "disabled" },
-        { name: "!setcounter counter N", cost: "FREE", desc: "Set a counter to any value. (Mods only.)", cooldown: "", status: "disabled" },
-        { name: "!quizleaderboardclear", cost: "FREE", desc: "Wipe the quiz leaderboard. Brutal. (Mod only.)", cooldown: "", status: "disabled" },
-        { name: "!deletequote", cost: "FREE", desc: "Delete a quote from the wall. (Broadcaster only.)", cooldown: "", status: "disabled" },
-        { name: "!givetickets @user N", cost: "FREE", desc: "Hand out lotto tickets. (Broadcaster only.)", cooldown: "", status: "disabled" },
-        { name: "!ticketleaderall", cost: "FREE", desc: "Full ticket leaderboard. (Broadcaster only.)", cooldown: "", status: "disabled" },
-        { name: "!givepoints @user N", cost: "FREE", desc: "Mint points out of thin air. (Broadcaster only.)", cooldown: "", status: "disabled" },
-        { name: "!addpoints @user N", cost: "FREE", desc: "Add points to a user. (Broadcaster only.)", cooldown: "", status: "disabled" },
-        { name: "!removepoints @user N", cost: "FREE", desc: "Confiscate points. The IRS of chat. (Broadcaster only.)", cooldown: "", status: "disabled" },
-        { name: "!setpoints @user", cost: "FREE", desc: "Set a user's points directly. (Mod only.)", cooldown: "", status: "disabled" },
-        { name: "!so @user", cost: "FREE", desc: "Shoutout another streamer. (Mod only.)", cooldown: "", status: "disabled" }
+        { name: "!tts text", cost: "FREE", desc: "The bot's TTS voice on demand. (Broadcaster only) Viewers: use the !TTS redeem in Chaos.", cooldown: "", status: "disabled" },
+        { name: "!info", cost: "FREE", desc: "Bot and channel info dump. (Mod only).", cooldown: "", status: "disabled" },
+        { name: "!stats", cost: "FREE", desc: "Bot stats. Numbers go up. (Mod only).", cooldown: "", status: "disabled" },
+        { name: "!recap", cost: "FREE", desc: "Recap of the stream so far. For mods who tabbed out. (Mod only).", cooldown: "", status: "disabled" },
+        { name: "!resetwheel", cost: "FREE", desc: "Reset the Challenge Wheel. (Mod only).", cooldown: "", status: "disabled" },
+        { name: "!resetcounter counter", cost: "FREE", desc: "Reset a counter to zero. (Mod only).", cooldown: "", status: "disabled" },
+        { name: "!setcounter counter N", cost: "FREE", desc: "Set a counter to any value. (Mod only).", cooldown: "", status: "disabled" },
+        { name: "!quizleaderboardclear", cost: "FREE", desc: "Wipe the quiz leaderboard. Brutal. (Mod only).", cooldown: "", status: "disabled" },
+        { name: "!deletequote", cost: "FREE", desc: "Delete a quote from the wall. (Broadcaster only).", cooldown: "", status: "disabled" },
+        { name: "!givetickets @user N", cost: "FREE", desc: "Hand out lotto tickets. (Broadcaster only).", cooldown: "", status: "disabled" },
+        { name: "!ticketleaderall", cost: "FREE", desc: "Full ticket leaderboard. (Broadcaster only).", cooldown: "", status: "disabled" },
+        { name: "!givepoints @user N", cost: "FREE", desc: "Mint points out of thin air. (Broadcaster only).", cooldown: "", status: "disabled" },
+        { name: "!addpoints @user N", cost: "FREE", desc: "Add points to a user. (Broadcaster only).", cooldown: "", status: "disabled" },
+        { name: "!removepoints @user N", cost: "FREE", desc: "Confiscate points. The IRS of chat. (Broadcaster only).", cooldown: "", status: "disabled" },
+        { name: "!setpoints @user", cost: "FREE", desc: "Set a user's points directly. (Mod only).", cooldown: "", status: "disabled" },
+        { name: "!so @user", cost: "FREE", desc: "Shoutout another streamer. (Mod only).", cooldown: "", status: "disabled" }
       ]
     }
   ],
 
   changelog: [
+    { date: "2026-11-02", text: "🎃➡️🥚 Spooky Season over — Terminal Green restored. The eggs are eggs again. Layout pass: sticky filters, section counts, collapsible sections, badges that tell the truth. Same chaos, less scrolling. Also: Egg !spin is mod-only now, and !commment got its third m confiscated." },
+    { date: "2026-10-29", text: "...",
     { date: "2026-10-28", text: "🎃 SPOOKY SEASON IS LIVE — Blood Moon palette deployed. The eggs are pumpkins now. Don't ask." },
     { date: "2026-10-28", text: "v2 — Massive command dump added (Blackjack, Hangman, Trivia, Slots, Fluffless Cat Arena). Mod/Offline commands are now greyed out." },
     { date: "2026-10-28", text: "🥚 Egg Cohost section added. It remembers regulars and talks back." },
