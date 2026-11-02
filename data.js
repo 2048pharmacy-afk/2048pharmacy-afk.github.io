@@ -267,7 +267,7 @@ window.MENU = {
 
   changelog: [
     { date: "2026-11-02", text: "🎃➡️🥚 Spooky Season over — Terminal Green restored. The eggs are eggs again. Layout pass: sticky filters, section counts, collapsible sections, badges that tell the truth. Same chaos, less scrolling. Also: Egg !spin is mod-only now, and !commment got its third m confiscated." },
-    { date: "2026-10-29", text: "...",
+    { date: "2026-10-29", text: "..." },
     { date: "2026-10-28", text: "🎃 SPOOKY SEASON IS LIVE — Blood Moon palette deployed. The eggs are pumpkins now. Don't ask." },
     { date: "2026-10-28", text: "v2 — Massive command dump added (Blackjack, Hangman, Trivia, Slots, Fluffless Cat Arena). Mod/Offline commands are now greyed out." },
     { date: "2026-10-28", text: "🥚 Egg Cohost section added. It remembers regulars and talks back." },
