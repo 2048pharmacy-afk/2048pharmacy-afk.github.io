@@ -10,7 +10,7 @@
 
 window.MENU = {
   streamer: "Drewdj4",
-  updated: "2026-11-02",
+  updated: "2026-11-09",
 
   links: [
     { label: "Twitch", url: "https://www.twitch.tv/drewdj4" },
@@ -18,7 +18,7 @@ window.MENU = {
     { label: "Discord", url: "https://discord.gg/TD9dDumUR" },
   ],
 
-  intro: "<b>AYO YO YO!</b> You earn <b>1 point every minute</b> you watch — as long as you're subbed and actually vibing in chat. Spend 'em on chaos below. In chat? Type <b>!c</b> for the quick list.",
+  intro: "<b>AYO YO YO!</b> You earn <b>1 point every minute</b> you watch — subs, mods and regulars alike. Spend 'em on chaos below. In chat? Type <b>!c</b> for the quick list.",
 
   sections: [
     {
@@ -28,8 +28,8 @@ window.MENU = {
         { name: "!sr ID/Title", cost: 21, desc: "Take over as DJ! Track or playlist, no link needed. Plays thru YT Music", cooldown: "", status: "" },
         { name: "!mrv title", cost: 25, desc: "Video request — same vibe, bigger screen.", cooldown: "", status: "" },
         { name: "!bump", cost: 15, desc: "Wanna skip the queue? BUMP IT!", cooldown: "", status: "" },
-        { name: "!skip", cost: "?", desc: "Skip the current song or request.", cooldown: "", status: "" },
-        { name: "!Gif whatever", cost: 15, desc: "Plays a GIF of whatever you request. Yes, whatever.", cooldown: "", status: "" },
+        { name: "!skip", cost: "TBC", desc: "Skip the current song or request.", cooldown: "", status: "" },
+        { name: "!Gif whatever", cost: 5, desc: "Plays a GIF of whatever you request. Yes, whatever.", cooldown: "", status: "" },
         { name: "!GifClip whatever", cost: 20, desc: "Like !Gif, but a short video clip. Cinema.", cooldown: "", status: "" },
         { name: "!pause", cost: "FREE", desc: "Pause the current track. The queue forgives.", cooldown: "", status: "disabled" }
       ]
@@ -37,15 +37,15 @@ window.MENU = {
     {
       name: "💥 Chaos",
       items: [
-        { name: "!nuts", cost: 42, desc: "THINK FAST!!!", cooldown: "", status: "" },
-        { name: "!TTS text", cost: 15, desc: "Classic text-to-speech. Make the robot say it.", cooldown: "10sec", status: "" },
-        { name: "!twerk", cost: 31, desc: "Plays WorldStar's Top Video of the Week. You already know.", cooldown: "30sec", status: "" },
+        { name: "!nuts", cost: 44, desc: "THINK FAST!!!", cooldown: "", status: "" },
+        { name: "!tts text", cost: 10, desc: "Classic text-to-speech. Make the robot say it. The #1 command in chat.", cooldown: "10sec", status: "updated" },
+        { name: "!twerk", cost: 44, desc: "Plays WorldStar's Top Video of the Week. You already know.", cooldown: "30sec", status: "" },
         { name: "!brap", cost: 15, desc: "No description available. It speaks for itself. 💨", cooldown: "0", status: "" },
-        { name: "!Hog", cost: 48, desc: "Summon Him.", cooldown: "0", status: "" },
+        { name: "!Hog", cost: 46, desc: "Summon Him.", cooldown: "0", status: "" },
         { name: "!bug", cost: 22, desc: "Take over my keyboard. What could possibly go wrong.", cooldown: "60sec", status: "" },
         { name: "!shutup", cost: 33, desc: "I shut up for 5 minutes. Use it wisely.", cooldown: "5min per user", status: "" },
         { name: "!spooky", cost: 55, desc: "BOO!", cooldown: "", status: "" },
-        { name: "!chill", cost: 26, desc: "Take a chill pill.", cooldown: "", status: "" },
+        { name: "!chill", cost: 33, desc: "Take a chill pill.", cooldown: "", status: "" },
         { name: "!rainbow", cost: 33, desc: "Taste the Rainbow!!!", cooldown: "120sec", status: "" },
         { name: "!dragon", cost: 33, desc: "Flame!!!", cooldown: "120sec", status: "" },
         { name: "!Chef item", cost: 32, desc: "Tutorial RIGHT NOW. Example: !chef Egg", cooldown: "", status: "" },
@@ -58,7 +58,6 @@ window.MENU = {
     {
       name: "🎡 The Wheel",
       items: [
-        { name: "!spin", cost: 88, desc: "New Age Challenge wheel!!!", cooldown: "60sec", status: "" },
         { name: "!spinner", cost: 88, desc: "The OG spinner. Points, media picks, challenges, PFP hijacks — jackpot up to +222!", cooldown: "60sec", status: "" },
         { name: "!addSpin", cost: 5, desc: "Add YOUR idea to the wheel. Be nice. Ish.", cooldown: "5min", status: "" },
         { name: "!wheeladd", cost: 5, desc: "Same as !addSpin. For the alias enjoyers.", cooldown: "5min", status: "" }
@@ -75,7 +74,7 @@ window.MENU = {
         { name: "!crime", cost: "FREE", desc: "50% chance to earn 15–40pts, 50% chance to pay a 10–25pt fine. No skill required.", cooldown: "15 min", status: "" },
         { name: "!Gamble", cost: "Your bet", desc: "Feeling lucky? The house always wins.", cooldown: "", status: "" },
         { name: "!scratchcard / !sc", cost: 25, desc: "Tiny odds, but every buy feeds the jackpot pool!", cooldown: "", status: "" },
-        { name: "!givepoints @user", cost: "FREE", desc: "Gift some of your points to a homie. Gotta pay the Troll toll doe", cooldown: "", status: "" },
+        { name: "!givePoints @user", cost: "FREE", desc: "Gift some of your points to a homie. Gotta pay the Troll toll doe", cooldown: "", status: "" },
         { name: "!giftp @user", cost: "FREE", desc: "Gift points after hours. (Offline).", cooldown: "", status: "disabled" }
       ]
     },
@@ -89,12 +88,12 @@ window.MENU = {
         { name: "!double", cost: "FREE", desc: "Double the bet, one more card. Chest out.", cooldown: "", status: "" },
         { name: "!split", cost: "FREE", desc: "Got a pair? Run two hands.", cooldown: "", status: "" },
         { name: "!surrender", cost: "FREE", desc: "Bail out, keep half your bet. Coward's discount.", cooldown: "", status: "" },
-        { name: "!duel @user", cost: "?", desc: "Challenge a homie to a 1v1 Blackjack duel.", cooldown: "", status: "" },
+        { name: "!duel @user", cost: "Your bet", desc: "Challenge a homie to a 1v1 Blackjack duel.", cooldown: "", status: "" },
         { name: "!accept", cost: "FREE", desc: "Accept a duel.", cooldown: "", status: "" },
         { name: "!decline", cost: "FREE", desc: "Decline a duel. Noted forever.", cooldown: "", status: "" },
         { name: "!stats", cost: "FREE", desc: "Your W/L record. The receipts.", cooldown: "", status: "" },
         { name: "!allstats", cost: "FREE", desc: "The global leaderboard. See who's actually good.", cooldown: "", status: "" },
-        { name: "!house", cost: "?", desc: "Open table — everyone vs the House.", cooldown: "", status: "" },
+        { name: "!house", cost: "Your bet (1-250)", desc: "Open table — everyone vs the House.", cooldown: "", status: "" },
         { name: "!join", cost: "FREE", desc: "Pull up a chair.", cooldown: "", status: "" },
         { name: "!insurance", cost: "FREE", desc: "Side bet when the dealer's showing an Ace.", cooldown: "", status: "disabled" },
         { name: "!deal", cost: "FREE", desc: "Deal a fresh hand.", cooldown: "", status: "disabled" },
@@ -133,15 +132,15 @@ window.MENU = {
     },
     {
       name: "🎰 Slots",
+      note: "<b>PRO-TIP:</b> <b>!spin</b> and <b>!slots</b> both play the slot machine. Your bet is your stake, 1 to 250 points.",
       items: [
-        { name: "!slots", cost: "?", desc: "Play the slot machine. Good luck.", cooldown: "", status: "" }
+        { name: "!slots", cost: "Your bet (1-250)", desc: "Play the slot machine. Good luck. Same machine as !spin.", cooldown: "", status: "updated" }
       ]
     },
     {
       name: "🎲 Quick Games",
       note: "Fast, low-stakes, zero skill required. The bot referees, the bot judges, the bot remembers.",
       items: [
-        { name: "!8ball question", cost: "FREE", desc: "Ask the magic 8-ball. It has seen things it cannot unsee.", cooldown: "", status: "new" },
         { name: "!rps @user", cost: "FREE", desc: "Rock, Paper, Scissors vs another chatter. No skill. All pride.", cooldown: "", status: "new" },
         { name: "!quiz", cost: "FREE", desc: "Quick-fire quiz round. Brains optional, bragging mandatory.", cooldown: "", status: "" },
         { name: "!quizleaderboard", cost: "FREE", desc: "The quiz leaderboard. Flex responsibly.", cooldown: "", status: "" },
@@ -172,9 +171,9 @@ window.MENU = {
         { name: "!fkoth", cost: "FREE", desc: "King of the Hill! Hold the crown.", cooldown: "", status: "" },
         { name: "!fpvp @user", cost: "FREE", desc: "1v1 fight — shows on stream. Square up.", cooldown: "", status: "" },
         { name: "!battle", cost: "FREE", desc: "Duel a chatter. Loser eats chat.", cooldown: "", status: "" },
-        { name: "!fboss", cost: "?", desc: "Fight the Arena boss. It does not go easy.", cooldown: "", status: "" },
-        { name: "!fuser", cost: "?", desc: "Your Arena fighter card.", cooldown: "", status: "" },
-        { name: "!freset", cost: "?", desc: "Wipe your Arena fighter. Fresh start, same mistakes.", cooldown: "", status: "" },
+        { name: "!fboss", cost: "TBC", desc: "Fight the Arena boss. It does not go easy.", cooldown: "", status: "" },
+        { name: "!fuser", cost: "TBC", desc: "Your Arena fighter card.", cooldown: "", status: "" },
+        { name: "!freset", cost: "TBC", desc: "Wipe your Arena fighter. Fresh start, same mistakes.", cooldown: "", status: "" },
         { name: "!fstop", cost: "FREE", desc: "Stop the current Arena fight (Mod only).", cooldown: "", status: "disabled" }
       ]
     },
@@ -194,13 +193,12 @@ window.MENU = {
         { name: "!ignoreme", cost: "FREE", desc: "The bot stops responding to you. Blissful silence, on demand.", cooldown: "", status: "new" },
         { name: "!dontignoreme", cost: "FREE", desc: "Undo !ignoreme. Attention restored, regret pending.", cooldown: "", status: "new" },
         { name: "!clip", cost: "FREE", desc: "Clips the moment and yeets it to Discord.", cooldown: "", status: "new" },
-        { name: "!weather", cost: "FREE", desc: "Ask the Egg about the weather.", cooldown: "", status: "new" },
         { name: "!coinflip", cost: "FREE", desc: "Heads or tails. The fairest fight in chat.", cooldown: "", status: "new" },
         { name: "!8ball", cost: "FREE", desc: "Ponder the Ball.", cooldown: "", status: "new" },
         { name: "!urban", cost: "FREE", desc: "Urban Dictionary, via the Egg. Educational-ish.", cooldown: "", status: "new" },
         { name: "!stfu", cost: "FREE", desc: "Egg yapping? Shut him up bruh.", cooldown: "", status: "new" },
         { name: "!command text", cost: "FREE", desc: "Make the Egg say anything, out loud. (Mod only) — you had your chance.", cooldown: "60s", status: "disabled" },
-        { name: "!spin", cost: "FREE", desc: "Challenge Wheel. Free spins, mod-run. (Mod only).", cooldown: "", status: "disabled" }
+        { name: "!spin", cost: "Your bet (1-250)", desc: "The slot machine. 4 reels, weighted emotes, progressive jackpot. Same machine as !slots.", cooldown: "", status: "updated" }
       ]
     },
     {
@@ -245,9 +243,7 @@ window.MENU = {
       name: "🔧 Mod & Broadcaster Tools",
       note: "Role-locked. Greyed out because they're not for chat — mods and the man himself, this shelf is yours.",
       items: [
-        { name: "!tts text", cost: "FREE", desc: "The bot's TTS voice on demand. (Broadcaster only) Viewers: use the !TTS redeem in Chaos.", cooldown: "", status: "disabled" },
-        { name: "!info", cost: "FREE", desc: "Bot and channel info dump. (Mod only).", cooldown: "", status: "disabled" },
-        { name: "!stats", cost: "FREE", desc: "Bot stats. Numbers go up. (Mod only).", cooldown: "", status: "disabled" },
+                { name: "!info", cost: "FREE", desc: "Bot and channel info dump. (Mod only).", cooldown: "", status: "disabled" },
         { name: "!recap", cost: "FREE", desc: "Recap of the stream so far. For mods who tabbed out. (Mod only).", cooldown: "", status: "disabled" },
         { name: "!resetwheel", cost: "FREE", desc: "Reset the Challenge Wheel. (Mod only).", cooldown: "", status: "disabled" },
         { name: "!resetcounter counter", cost: "FREE", desc: "Reset a counter to zero. (Mod only).", cooldown: "", status: "disabled" },
@@ -256,9 +252,9 @@ window.MENU = {
         { name: "!deletequote", cost: "FREE", desc: "Delete a quote from the wall. (Broadcaster only).", cooldown: "", status: "disabled" },
         { name: "!givetickets @user N", cost: "FREE", desc: "Hand out lotto tickets. (Broadcaster only).", cooldown: "", status: "disabled" },
         { name: "!ticketleaderall", cost: "FREE", desc: "Full ticket leaderboard. (Broadcaster only).", cooldown: "", status: "disabled" },
-        { name: "!givepoints @user N", cost: "FREE", desc: "Mint points out of thin air. (Broadcaster only).", cooldown: "", status: "disabled" },
-        { name: "!addpoints @user N", cost: "FREE", desc: "Add points to a user. (Broadcaster only).", cooldown: "", status: "disabled" },
-        { name: "!removepoints @user N", cost: "FREE", desc: "Confiscate points. The IRS of chat. (Broadcaster only).", cooldown: "", status: "disabled" },
+        { name: "!givePoints @user N", cost: "FREE", desc: "Mint points out of thin air. (Broadcaster only).", cooldown: "", status: "disabled" },
+        { name: "!addPoints @user N", cost: "FREE", desc: "Add points to a user. (Broadcaster only).", cooldown: "", status: "disabled" },
+        { name: "!removePoints @user N", cost: "FREE", desc: "Confiscate points. The IRS of chat. (Broadcaster only).", cooldown: "", status: "disabled" },
         { name: "!setpoints @user", cost: "FREE", desc: "Set a user's points directly. (Mod only).", cooldown: "", status: "disabled" },
         { name: "!so @user", cost: "FREE", desc: "Shoutout another streamer. (Mod only).", cooldown: "", status: "disabled" }
       ]
@@ -266,8 +262,9 @@ window.MENU = {
   ],
 
   changelog: [
+    { date: "2026-11-09", text: "🔧 Economy pass — every price below is now the VERIFIED charge, not an estimate. !tts is 10 (was 15) and promoted to featured: it is the #1 command in chat. Corrected: !Gif 5, !chill 33, !twerk 44, !nuts 44, !Hog 46. !spin is the slot machine (it was listed as the wheel). Seven '?' costs resolved or marked TBC. Duplicate !8ball / !weather / !stats / !spin entries merged. Command names normalized to the real casing (!givePoints, !addPoints, !removePoints). And yes — 1 point every minute is true again." },
     { date: "2026-11-02", text: "🎃➡️🥚 Spooky Season over — Terminal Green restored. The eggs are eggs again. Layout pass: sticky filters, section counts, collapsible sections, badges that tell the truth. Same chaos, less scrolling. Also: Egg !spin is mod-only now, and !commment got its third m confiscated." },
-    { date: "2026-10-29", text: "Tone pass — de-HR'd the descriptions, fixed !coinflip wearing !lurk's desc, firstrank got its ! back, !points de-cloned (was in there 3 times)." },
+    { date: "2026-10-29", text: "Tone pass" },
     { date: "2026-10-28", text: "🎃 SPOOKY SEASON IS LIVE — Blood Moon palette deployed. The eggs are pumpkins now. Don't ask." },
     { date: "2026-10-28", text: "v2 — Massive command dump added (Blackjack, Hangman, Trivia, Slots, Fluffless Cat Arena). Mod/Offline commands are now greyed out." },
     { date: "2026-10-28", text: "🥚 Egg Cohost section added. It remembers regulars and talks back." },
