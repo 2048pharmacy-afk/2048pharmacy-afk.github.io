@@ -264,7 +264,7 @@ window.MENU = {
   changelog: [
     { date: "2026-11-09", text: "🔧 Economy pass — every price below is now the VERIFIED charge, not an estimate. !tts is 10 (was 15) and promoted to featured: it is the #1 command in chat. Corrected: !Gif 5, !chill 33, !twerk 44, !nuts 44, !Hog 46. !spin is the slot machine (it was listed as the wheel). Seven '?' costs resolved or marked TBC. Duplicate !8ball / !weather / !stats / !spin entries merged. Command names normalized to the real casing (!givePoints, !addPoints, !removePoints). And yes — 1 point every minute is true again." },
     { date: "2026-11-02", text: "🎃➡️🥚 Spooky Season over — Terminal Green restored. The eggs are eggs again. Layout pass: sticky filters, section counts, collapsible sections, badges that tell the truth. Same chaos, less scrolling. Also: Egg !spin is mod-only now, and !commment got its third m confiscated." },
-    { date: "2026-10-29", text: "Tone pass" },
+    { date: "2026-10-29", text: "Tone pass " },
     { date: "2026-10-28", text: "🎃 SPOOKY SEASON IS LIVE — Blood Moon palette deployed. The eggs are pumpkins now. Don't ask." },
     { date: "2026-10-28", text: "v2 — Massive command dump added (Blackjack, Hangman, Trivia, Slots, Fluffless Cat Arena). Mod/Offline commands are now greyed out." },
     { date: "2026-10-28", text: "🥚 Egg Cohost section added. It remembers regulars and talks back." },
