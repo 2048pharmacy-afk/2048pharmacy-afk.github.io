@@ -178,7 +178,7 @@ window.MENU = {
       ]
     },
     {
-      name: "🤖 Egg Cohost (StreamLinkr)",
+      name: "🤖 Egg Cohost (EggBot)",
       note: "We got a cohost living in chat. It remembers the regulars, reads the room, and talks back — greetings, shoutouts, roasts on demand, plus the holy trinity: hugs, slaps, bonks. <b>Everything below is FREE unless marked as a game.</b>",
       items: [
         { name: "!comment", cost: "FREE", desc: "Talk to the Egg directly. Ask it anything — it has opinions.", cooldown: "", status: "new" },
